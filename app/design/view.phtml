@@ -1,0 +1,11 @@
+<?php if (Mage::helper('core')->isModuleEnabled('Smart_FreeHemming')): ?>
+    <?php $hemming = Mage::helper('freehemming/data')->getFreeHemmingAttribute($_product); ?>
+    <?php if($hemming == 1): ?>
+        <script type="text/javascript">
+            jQuery(document).ready(function() {
+                jQuery("#free-hemming-block-link").show();
+                jQuery("#size-guide-block-link").hide();
+            });
+        </script>
+    <?php endif; ?>
+<?php endif; ?>
